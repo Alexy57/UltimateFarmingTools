@@ -1,0 +1,66 @@
+# Ultimate Farming Tools - Configuration
+
+settings:
+  enable_hammer: true          # Activer ou désactiver le marteau
+  enable_hoe: true             # Activer ou désactiver les houes améliorées
+  enable_axe: true             # Activer ou désactiver les haches améliorées
+  enable_pickaxe: true         # Activer ou désactiver les pioches améliorées
+  enable_shovel: true          # Activer ou désactiver les pelles améliorées
+  default_durability_multiplier: 2.0  # Multiplie la durabilité par ce facteur pour les outils Ultimate
+
+hammer:
+  break_area: 3x3              # Zone de cassage (ex: 3x3 blocs devant)
+  only_mine_specific_blocks: true   # Ne mine que certains types de blocs (pierre, minerai, etc.)
+  allowed_blocks:
+    - stone
+    - deepslate
+    - iron_ore
+    - gold_ore
+    - diamond_ore
+  energy_cost_per_use: 5       # Coût en "énergie" par utilisation (si tu veux ajouter une mécanique de fatigue)
+  custom_name: "&6Ultimate Hammer"
+  lore:
+    - "&7Un marteau qui peut tout briser..."
+    - "&8Zone de cassage: 3x3"
+
+hoe:
+  till_area: 3x3               # Zone de labourage
+  auto_plant_seeds: true       # Plante automatiquement si graines disponibles
+  custom_name: "&aUltimate Hoe"
+  lore:
+    - "&7Houe magique pour travailler la terre."
+    - "&8Laboure une zone 3x3."
+
+axe:
+  break_area: 1x3              # Coupe 3 blocs de haut d'arbres
+  tree_feller: true            # Coupe automatiquement tout l'arbre d'un coup
+  custom_name: "&2Ultimate Axe"
+  lore:
+    - "&7Coupe les arbres comme jamais avant."
+    - "&8Fonction arbre complet: activée."
+
+pickaxe:
+  vein_miner: true             # Mine tous les minerais connectés du même type
+  max_vein_size: 64            # Taille maximale de filon miné d'un coup
+  custom_name: "&bUltimate Pickaxe"
+  lore:
+    - "&7Trouvez un minerai, prenez tout d'un coup!"
+    - "&8Limite: 64 blocs connectés."
+
+shovel:
+  break_area: 3x3              # Pelle qui casse une zone 3x3
+  flatten_area: true           # Peut aplatir automatiquement pour faire des chemins
+  custom_name: "&eUltimate Shovel"
+  lore:
+    - "&7Creuse plus vite que votre ombre."
+    - "&8Zone de creusage: 3x3."
+
+energy_system:
+  enabled: false               # Si activé, chaque outil consomme de l'énergie ou de la mana
+  max_energy: 100              # Énergie maximale par outil
+  recharge_time_seconds: 60    # Temps de recharge en secondes pour recharger 100%
+
+messages:
+  prefix: "&8[&6UltimateTools&8] "
+  not_enough_energy: "&cPas assez d'énergie pour utiliser cet outil!"
+  tool_disabled: "&cCet outil est désactivé dans la configuration."
